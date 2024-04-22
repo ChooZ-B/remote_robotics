@@ -1,0 +1,29 @@
+actions: []
+authors: ''
+brief: ''
+bugtracker: ''
+depends:
+- catkin
+- roscpp
+- mex_ros_api
+- std_msgs
+- message_runtime
+- sensor_msgs
+- image_transport
+- OpenCV
+- message_generation
+- cv_bridge
+description: The remote_robotics package
+license: GPLv3
+maintainers: cb <cb@todo.todo>
+msgs:
+- RotorAngle
+- MotorImg
+package_type: package
+repo_url: ''
+srvs:
+- rotor_angle
+- rect_dims
+- rotor_angle
+- motor_idx
+url: ''

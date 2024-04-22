@@ -1,0 +1,7 @@
+<map id="IManip" name="IManip">
+<area shape="rect" id="node2" href="$classImgSegmentSpecial.html" title="Crops received image according to motor index from topic rectangle/index. " alt="" coords="5,80,144,107"/>
+<area shape="rect" id="node3" href="$classManipPrototype.html" title="Test class with no real callback and manipulate implementation. " alt="" coords="169,80,282,107"/>
+<area shape="rect" id="node4" href="$classManip.html" title="Fully implements callback function. " alt="" coords="197,155,254,181"/>
+<area shape="rect" id="node5" href="$classBinaryImg.html" title="Converts received image to binary image. " alt="" coords="118,229,199,256"/>
+<area shape="rect" id="node6" href="$classImgSegmentSimple.html" title="Crops received image according to coordinates from topic rectangle/dimensions. " alt="" coords="224,229,360,256"/>
+</map>

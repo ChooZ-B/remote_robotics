@@ -1,0 +1,5 @@
+<map id="IAngleDetector" name="IAngleDetector">
+<area shape="rect" id="node2" href="$classAngleDetector.html" title="Detects angle of object. " alt="" coords="70,80,175,107"/>
+<area shape="rect" id="node3" href="$classAnglePublisher.html" title="AnglePublisher" alt="" coords="5,155,115,181"/>
+<area shape="rect" id="node4" href="$classAngleServer.html" title="AngleServer" alt="" coords="139,155,232,181"/>
+</map>

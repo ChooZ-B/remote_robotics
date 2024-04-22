@@ -1,0 +1,5 @@
+<map id="ImgSegmentSimple" name="ImgSegmentSimple">
+<area shape="rect" id="node2" href="$classManip.html" title="Fully implements callback function. " alt="" coords="45,155,102,181"/>
+<area shape="rect" id="node3" href="$classManipPrototype.html" title="Test class with no real callback and manipulate implementation. " alt="" coords="17,80,130,107"/>
+<area shape="rect" id="node4" href="$classIManip.html" title="Interface for number of image manipulation classes. " alt="" coords="43,5,104,32"/>
+</map>
