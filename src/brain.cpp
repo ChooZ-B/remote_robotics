@@ -69,7 +69,7 @@ bool Brain::setPos(int motor_idx, int new_pos)
 {
     mex_ros_api::servo_motor_pos srv;
 
-    new_pos = 
+    //new_pos = 
 
     srv.request.inpMotorIdxSrv = motor_idx;
     srv.request.inpPosUnit = std::string("DEG");
