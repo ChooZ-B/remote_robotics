@@ -10,6 +10,8 @@ int main(int argc, char** argv)
     ros::init(argc,argv,"binary_manip");
     ros::NodeHandle nh;
 
+    // deprecated
+    //
     //if(argc < 2)
     //{
     //    ROS_INFO("usage: process <subscriber_topic const char*>");

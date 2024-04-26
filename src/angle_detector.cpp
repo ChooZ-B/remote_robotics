@@ -28,7 +28,7 @@ void AngleServer::callback(const remote_robotics::MotorImg& msg)
     try
     {
         if((msg.INDEX < 0) || (msg.INDEX > 23))
-            throw std::string("Index out of bounds.");
+            throw std::string("motor index out of bounds in member function callback()");
 
         angles[msg.INDEX] = getAngle(cv_ptr->image);
 
@@ -104,8 +104,7 @@ double AngleDetector::getAngle(cv::Mat& bin)
 
     double theta = atan2(b, a-c)/2.0;
     
-    // return minus theta since the algorithm is counting
-    // the angle clockwise
+    // return minus theta since the algorithm is counting the angle clockwise
     return -theta*180/PI;
 }
 

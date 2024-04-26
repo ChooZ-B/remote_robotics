@@ -164,7 +164,7 @@ add_executable(angle_detector src/angle_detect_main.cpp src/angle_detector.cpp)
 add_dependencies(angle_detector ${remote_robotics_EXPORTED_TARGETS})
 target_link_libraries(angle_detector ${catkin_LIBRARIES} ${OpenCV_LIBRARIES} ${system_lib_LIBRARIES})
 
-add_executable(brain src/brain.cpp)
+add_executable(brain src/brain_main.cpp src/brain.cpp)
 add_dependencies(brain ${remote_robotics_EXPORTED_TARGETS})
 target_link_libraries(brain ${catkin_LIBRARIES} ${OpenCV_LIBRARIES} ${system_lib_LIBRARIES})
 

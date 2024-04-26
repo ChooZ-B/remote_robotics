@@ -11,11 +11,19 @@ int main(int argc, char** argv)
 
     if(argc < 3)
     {
-        ROS_INFO("usage: process <subscriber_topic const char*> <publisher_topic const char*>");
+        ROS_INFO("usage: process <subscriber_topic const char*>\n");
         return 1;
     }
  
-    AngleServer a(argv[1],5);
+    try
+    {
+        AngleServer a(argv[1],5);
+    }
+    catch(std::string msg)
+    {
+        ROS_ERROR("%s\n",msg.c_str());
+        return 0;
+    }
     ros::spin();
     return 0;
 }
