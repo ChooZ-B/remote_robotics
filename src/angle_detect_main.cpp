@@ -22,7 +22,7 @@ int main(int argc, char** argv)
     //catch(std::string msg)
     //{
     //    ROS_ERROR("%s\n",msg.c_str());
-    //    return 0;
+    //    return 1;
     //}
     ros::spin();
     return 0;
