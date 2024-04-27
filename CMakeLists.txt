@@ -14,7 +14,7 @@ find_package(catkin REQUIRED COMPONENTS
   sensor_msgs
   message_generation
   std_msgs
-  mex_ros_api
+  #mex_ros_api
 )
 find_package(OpenCV)
 
@@ -64,6 +64,7 @@ find_package(OpenCV)
    rect_dims.srv
    motor_idx.srv
    rotor_angle.srv
+   servo_motor_pos.srv
  )
 
 ## Generate actions in the 'action' folder
@@ -130,9 +131,8 @@ include_directories(
 )
 
 ## Declare a C++ library
-# add_library(${PROJECT_NAME}
-#   src/${PROJECT_NAME}/remote_robotics.cpp
-# )
+add_library(${PROJECT_NAME} ${${PROJECT_NAME}_SRCS})
+set_target_properties(${PROJECT_NAME} PROPERTIES LINKER_LANGUAGE CXX)
 
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
@@ -163,6 +163,10 @@ target_link_libraries(crop_dims_test ${catkin_LIBRARIES} ${system_lib_LIBRARIES}
 add_executable(angle_detector src/angle_detect_main.cpp src/angle_detector.cpp)
 add_dependencies(angle_detector ${remote_robotics_EXPORTED_TARGETS})
 target_link_libraries(angle_detector ${catkin_LIBRARIES} ${OpenCV_LIBRARIES} ${system_lib_LIBRARIES})
+
+add_executable(motor_hub src/servo_hub.cpp src/pololu/Pololu.cpp src/pololu/SerialCom.cpp src/pololu/ServoMotor.cpp)
+add_dependencies(motor_hub ${remote_robotics_EXPORTED_TARGETS})
+target_link_libraries(motor_hub ${catkin_LIBRARIES} ${system_lib_LIBRARIES})
 
 add_executable(brain src/brain_main.cpp src/brain.cpp)
 add_dependencies(brain ${remote_robotics_EXPORTED_TARGETS})

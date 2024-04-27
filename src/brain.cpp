@@ -2,7 +2,7 @@
 #include"img_manip.hpp"
 #include"angle_detector.hpp"
 #include"remote_robotics/rotor_angle.h"
-#include"mex_ros_api/servo_motor_pos.h"
+#include"remote_robotics/servo_motor_pos.h"
 
 
 
@@ -49,7 +49,7 @@
 Brain::Brain()
 {
     ros::ServiceClient curr_angle_client_ = nh_.serviceClient<remote_robotics::rotor_angle>("rotor_pos/angle");
-    ros::ServiceClient set_pos_client_ = nh_.serviceClient<mex_ros_api::servo_motor_pos>("set_abs_servo_motor");
+    ros::ServiceClient set_pos_client_ = nh_.serviceClient<remote_robotics::servo_motor_pos>("set_abs_servo_motor");
 }
 int Brain::getAngle(int motor_idx)
 {
@@ -67,7 +67,7 @@ int Brain::getAngle(int motor_idx)
 }
 bool Brain::setPos(int motor_idx, int new_pos)
 {
-    mex_ros_api::servo_motor_pos srv;
+    remote_robotics::servo_motor_pos srv;
 
     //new_pos = 
 

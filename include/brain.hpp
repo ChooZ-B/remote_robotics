@@ -2,6 +2,10 @@
 #define BRAIN_INCLUDED
 
 #include<ros/ros.h>
+#include"img_manip.hpp"
+#include"angle_detector.hpp"
+#include"remote_robotics/rotor_angle.h"
+#include"remote_robotics/servo_motor_pos.h"
 
 /**
  *

@@ -1,6 +1,6 @@
 #include<iostream>
 #include<ctime>
-#include<brain.hpp>
+#include"brain.hpp"
 
 int main(int argc, char** argv)
 {

@@ -1,5 +1,5 @@
-#include"img_manip.hpp"
 #include<sstream>
+#include"img_manip.hpp"
 
 IManip::~IManip(){};
 

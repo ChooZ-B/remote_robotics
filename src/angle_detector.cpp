@@ -1,7 +1,7 @@
-#include"angle_detector.hpp"
 #include<cv_bridge/cv_bridge.h>
 #include<sstream>
 #include<cmath>
+#include"angle_detector.hpp"
 
 AngleServer::AngleServer(const char* s_topic, int sq_size)
 {

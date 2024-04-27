@@ -1,0 +1,8 @@
+int32   inpMotorIdxSrv
+string  inpPosUnit
+int32   inpPosVal
+---
+int32   outMotorIdxSrv
+string  outPosUnit
+int32   outPosVal
+
