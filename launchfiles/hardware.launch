@@ -1,0 +1,10 @@
+<!-- launch this file on the pc where the camera and servo farm is physically connected to -->
+<!-- this file starts the motor control service and the image publishing node -->
+<launch>
+	<arg name="ctrl_dev_no" default="0" />
+	<arg name="cam_no" default="0" />
+
+	<node pkg="remote_robotics" type="servo_hub" name="servo_pos_service" args="$(arg ctrl_dev_no)" output="screen" />
+	<node pkg="remote_robotics" type="remro_cam" name="remro_cam" args="$(arg cam_no)" output="screen"/>
+	<node pkg="remote_robotics" type="binary_converter" name="binary_manip" output="screen"/>
+</launch>

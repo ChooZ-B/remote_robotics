@@ -34,7 +34,7 @@ int main(int argc, char **argv){
   ros::ServiceServer service = n.advertiseService("set_abs_servo_motor", setPosSrvMotor);
 
   // init serial connection
-  char portName[] = "/dev/ttyACM";  // Linux
+  char portName[] = "/dev/ttyACM";  // port name on Linux file system
   strcat(portName,argv[1]);
   
   conn = new Pololu(portName, 9600);

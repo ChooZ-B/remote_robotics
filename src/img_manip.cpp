@@ -1,6 +1,4 @@
-#include<sstream>
 #include"img_manip.hpp"
-
 IManip::~IManip(){};
 
 /*
@@ -159,14 +157,11 @@ ImgSegmentSpecial::ImgSegmentSpecial(const char* s_topic, int sq_size, const cha
 
     motor_number = 24;
 
-    /**
-     *
-     * ACHTUNG experimentell
-     *
-     */
     sub_ = it_.subscribe(s_topic,sq_size,&ImgSegmentSpecial::callback,this);
     pub_ = nh_.advertise<remote_robotics::MotorImg>(p_topic,pq_size); //
-    srv_ = nh_.advertiseService("rectangle/index",&ImgSegmentSpecial::set_dim_by_index,this);
+    server_ = nh_.advertiseService("rectangle/index",&ImgSegmentSpecial::set_dim_by_index,this);
+    ROS_INFO("image crop service is ready for processing requests\n");
+    
 }
 
 void ImgSegmentSpecial::manipulate(cv::Mat& image)

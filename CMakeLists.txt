@@ -148,7 +148,7 @@ target_link_libraries(remro_cam ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
 add_executable(img_view src/img_sub.cpp)
 target_link_libraries(img_view ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
 
-add_executable(crop_node src/maniptest.cpp src/img_manip.cpp)
+add_executable(crop_node src/crop.cpp src/img_manip.cpp)
 add_dependencies(crop_node ${remote_robotics_EXPORTED_TARGETS})
 target_link_libraries(crop_node ${catkin_LIBRARIES} ${OpenCV_LIBRARIES} ${system_lib_LIBRARIES})
 
@@ -164,9 +164,9 @@ add_executable(angle_detector src/angle_detect_main.cpp src/angle_detector.cpp)
 add_dependencies(angle_detector ${remote_robotics_EXPORTED_TARGETS})
 target_link_libraries(angle_detector ${catkin_LIBRARIES} ${OpenCV_LIBRARIES} ${system_lib_LIBRARIES})
 
-add_executable(motor_hub src/servo_hub.cpp src/pololu/Pololu.cpp src/pololu/SerialCom.cpp src/pololu/ServoMotor.cpp)
-add_dependencies(motor_hub ${remote_robotics_EXPORTED_TARGETS})
-target_link_libraries(motor_hub ${catkin_LIBRARIES} ${system_lib_LIBRARIES})
+add_executable(servo_hub src/servo_hub.cpp src/pololu/Pololu.cpp src/pololu/SerialCom.cpp src/pololu/ServoMotor.cpp)
+add_dependencies(servo_hub ${remote_robotics_EXPORTED_TARGETS})
+target_link_libraries(servo_hub ${catkin_LIBRARIES} ${system_lib_LIBRARIES})
 
 add_executable(brain src/brain_main.cpp src/brain.cpp)
 add_dependencies(brain ${remote_robotics_EXPORTED_TARGETS})

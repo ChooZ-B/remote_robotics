@@ -38,6 +38,7 @@ int main(int argc, char** argv)
     sensor_msgs::ImagePtr msg;
 
     ros::Rate loop_rate(10);
+    ROS_INFO("capturing..\n");
     while(nh.ok())
     {
         cap.read(frame);

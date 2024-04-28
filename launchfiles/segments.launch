@@ -1,0 +1,103 @@
+<!-- launch 24 crop nodes to publish images of every servo motor in the hub -->
+<launch>
+	<node pkg="remote_robotics" type="crop_node" name="crop0" output="screen" args="image/binary image/binary/motor0">
+		<remap from="rectangle/index" to="ROI/motor0"/>
+	</node>
+	<node pkg="remote_robotics" type="crop_node" name="crop1" output="screen" args="image/binary image/binary/motor1">
+		<remap from="rectangle/index" to="ROI/motor1"/>
+	</node>
+	<node pkg="remote_robotics" type="crop_node" name="crop2" output="screen" args="image/binary image/binary/motor2">
+		<remap from="rectangle/index" to="ROI/motor2"/>
+	</node>
+	<node pkg="remote_robotics" type="crop_node" name="crop3" output="screen" args="image/binary image/binary/motor3">
+		<remap from="rectangle/index" to="ROI/motor3"/>
+	</node>
+	<node pkg="remote_robotics" type="crop_node" name="crop4" output="screen" args="image/binary image/binary/motor4">
+		<remap from="rectangle/index" to="ROI/motor4"/>
+	</node>
+	<node pkg="remote_robotics" type="crop_node" name="crop5" output="screen" args="image/binary image/binary/motor5">
+		<remap from="rectangle/index" to="ROI/motor5"/>
+	</node>
+	<node pkg="remote_robotics" type="crop_node" name="crop6" output="screen" args="image/binary image/binary/motor6">
+		<remap from="rectangle/index" to="ROI/motor6"/>
+	</node>
+	<node pkg="remote_robotics" type="crop_node" name="crop7" output="screen" args="image/binary image/binary/motor7">
+		<remap from="rectangle/index" to="ROI/motor7"/>
+	</node>
+	<node pkg="remote_robotics" type="crop_node" name="crop8" output="screen" args="image/binary image/binary/motor8">
+		<remap from="rectangle/index" to="ROI/motor8"/>
+	</node>
+	<node pkg="remote_robotics" type="crop_node" name="crop9" output="screen" args="image/binary image/binary/motor9">
+		<remap from="rectangle/index" to="ROI/motor9"/>
+	</node>
+	<node pkg="remote_robotics" type="crop_node" name="crop10" output="screen" args="image/binary image/binary/motor10">
+		<remap from="rectangle/index" to="ROI/motor10"/>
+	</node>
+	<node pkg="remote_robotics" type="crop_node" name="crop11" output="screen" args="image/binary image/binary/motor11">
+		<remap from="rectangle/index" to="ROI/motor11"/>
+	</node>
+	<node pkg="remote_robotics" type="crop_node" name="crop12" output="screen" args="image/binary image/binary/motor12">
+		<remap from="rectangle/index" to="ROI/motor12"/>
+	</node>
+	<node pkg="remote_robotics" type="crop_node" name="crop13" output="screen" args="image/binary image/binary/motor13">
+		<remap from="rectangle/index" to="ROI/motor13"/>
+	</node>
+	<node pkg="remote_robotics" type="crop_node" name="crop14" output="screen" args="image/binary image/binary/motor14">
+		<remap from="rectangle/index" to="ROI/motor14"/>
+	</node>
+	<node pkg="remote_robotics" type="crop_node" name="crop15" output="screen" args="image/binary image/binary/motor15">
+		<remap from="rectangle/index" to="ROI/motor15"/>
+	</node>
+	<node pkg="remote_robotics" type="crop_node" name="crop16" output="screen" args="image/binary image/binary/motor16">
+		<remap from="rectangle/index" to="ROI/motor16"/>
+	</node>
+	<node pkg="remote_robotics" type="crop_node" name="crop17" output="screen" args="image/binary image/binary/motor17">
+		<remap from="rectangle/index" to="ROI/motor17"/>
+	</node>
+	<node pkg="remote_robotics" type="crop_node" name="crop18" output="screen" args="image/binary image/binary/motor18">
+		<remap from="rectangle/index" to="ROI/motor18"/>
+	</node>
+	<node pkg="remote_robotics" type="crop_node" name="crop19" output="screen" args="image/binary image/binary/motor19">
+		<remap from="rectangle/index" to="ROI/motor19"/>
+	</node>
+	<node pkg="remote_robotics" type="crop_node" name="crop20" output="screen" args="image/binary image/binary/motor20">
+		<remap from="rectangle/index" to="ROI/motor20"/>
+	</node>
+	<node pkg="remote_robotics" type="crop_node" name="crop21" output="screen" args="image/binary image/binary/motor21">
+		<remap from="rectangle/index" to="ROI/motor21"/>
+	</node>
+	<node pkg="remote_robotics" type="crop_node" name="crop22" output="screen" args="image/binary image/binary/motor22">
+		<remap from="rectangle/index" to="ROI/motor22"/>
+	</node>
+	<node pkg="remote_robotics" type="crop_node" name="crop23" output="screen" args="image/binary image/binary/motor23">
+		<remap from="rectangle/index" to="ROI/motor23"/>
+	</node>
+
+	
+
+	<!-- call motor_idx service to set the ROI of the crop nodes -->
+	<node pkg="rosservice" type="rosservice" name="set_crop0" args="call --wait /ROI/motor0 0" />
+	<node pkg="rosservice" type="rosservice" name="set_crop1" args="call --wait /ROI/motor1 1" />
+	<node pkg="rosservice" type="rosservice" name="set_crop2" args="call --wait /ROI/motor2 2" />
+	<node pkg="rosservice" type="rosservice" name="set_crop3" args="call --wait /ROI/motor3 3" />
+	<node pkg="rosservice" type="rosservice" name="set_crop4" args="call --wait /ROI/motor4 4" />
+	<node pkg="rosservice" type="rosservice" name="set_crop5" args="call --wait /ROI/motor5 5" />
+	<node pkg="rosservice" type="rosservice" name="set_crop6" args="call --wait /ROI/motor6 6" />
+	<node pkg="rosservice" type="rosservice" name="set_crop7" args="call --wait /ROI/motor7 7" />
+	<node pkg="rosservice" type="rosservice" name="set_crop8" args="call --wait /ROI/motor8 8" />
+	<node pkg="rosservice" type="rosservice" name="set_crop9" args="call --wait /ROI/motor9 9" />
+	<node pkg="rosservice" type="rosservice" name="set_crop10" args="call --wait /ROI/motor10 10" />
+	<node pkg="rosservice" type="rosservice" name="set_crop11" args="call --wait /ROI/motor11 11" />
+	<node pkg="rosservice" type="rosservice" name="set_crop12" args="call --wait /ROI/motor12 12" />
+	<node pkg="rosservice" type="rosservice" name="set_crop13" args="call --wait /ROI/motor13 13" />
+	<node pkg="rosservice" type="rosservice" name="set_crop14" args="call --wait /ROI/motor14 14" />
+	<node pkg="rosservice" type="rosservice" name="set_crop15" args="call --wait /ROI/motor15 15" />
+	<node pkg="rosservice" type="rosservice" name="set_crop16" args="call --wait /ROI/motor16 16" />
+	<node pkg="rosservice" type="rosservice" name="set_crop17" args="call --wait /ROI/motor17 17" />
+	<node pkg="rosservice" type="rosservice" name="set_crop18" args="call --wait /ROI/motor18 18" />
+	<node pkg="rosservice" type="rosservice" name="set_crop19" args="call --wait /ROI/motor19 19" />
+	<node pkg="rosservice" type="rosservice" name="set_crop20" args="call --wait /ROI/motor20 20" />
+	<node pkg="rosservice" type="rosservice" name="set_crop21" args="call --wait /ROI/motor21 21" />
+	<node pkg="rosservice" type="rosservice" name="set_crop22" args="call --wait /ROI/motor22 22" />
+	<node pkg="rosservice" type="rosservice" name="set_crop23" args="call --wait /ROI/motor23 23" />
+</launch>

@@ -136,7 +136,7 @@ class ImgSegmentSimple : public Manip{
 /**
  * \class ImgSegmentSpecial
  *
- * \brief Crops received image according to motor index from topic `rectangle/index`.
+ * \brief Crops received image according to motor index contained in srv `motor_idx`.
  *
  */
 class ImgSegmentSpecial : public IManip{
@@ -152,15 +152,9 @@ class ImgSegmentSpecial : public IManip{
 
         image_transport::Subscriber sub_;
         ros::Publisher pub_;
-        ros::ServiceServer srv_;
+        ros::ServiceServer server_;
     public:
         ImgSegmentSpecial(const char* s_topic, int sq_size, const char* p_topic, int pq_size);
-        /**
-         *
-         * ACHTUNG!! UEBERSCHREIBT NICHT URSPRUENGLICHE CALLBACKMETHODE WEGEN OVERLOADING
-         * eventuell neuschreiben von Manip
-         *
-         */
         void callback(const sensor_msgs::ImageConstPtr& msg); // const within parameter list necessary for ImageTransport appearantly
         void manipulate(cv::Mat& image);
         /**
