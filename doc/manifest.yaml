@@ -22,8 +22,8 @@ msgs:
 package_type: package
 repo_url: ''
 srvs:
-- rotor_angle
 - rect_dims
 - rotor_angle
 - motor_idx
+- servo_motor_pos
 url: ''

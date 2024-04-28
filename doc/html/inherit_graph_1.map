@@ -1,4 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classIBrain.html" title="interface " alt="" coords="5,5,61,32"/>
-<area shape="rect" id="node2" href="$classBrain.html" title="Brain" alt="" coords="109,5,161,32"/>
+<area shape="rect" id="node1" href="$classIAngleDetector.html" title="IAngleDetector" alt="" coords="5,31,115,57"/>
+<area shape="rect" id="node2" href="$classAngleDetector.html" title="Detects angle of object. " alt="" coords="163,31,268,57"/>
+<area shape="rect" id="node3" href="$classAnglePublisher.html" title="AnglePublisher" alt="" coords="316,5,425,32"/>
+<area shape="rect" id="node4" href="$classAngleServer.html" title="AngleServer" alt="" coords="324,56,417,83"/>
 </map>

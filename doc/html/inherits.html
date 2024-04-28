@@ -23,7 +23,12 @@ $(function() {
 <div class="textblock">
 <p><a href="hierarchy.html">Go to the textual class hierarchy</a></p>
 </div><table border="0" cellspacing="10" cellpadding="0">
-<tr><td><img src="inherit_graph_0.png" border="0" alt="" usemap="#IAngleDetector"/>
+<tr><td><img src="inherit_graph_0.png" border="0" alt="" usemap="#ExceptionServerMotor"/>
+<map name="ExceptionServerMotor" id="ExceptionServerMotor">
+<area shape="rect" id="node1" href="classExceptionServerMotor.html" title="Implementation of the exception class for class ServoMotor. " alt="" coords="5,5,156,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_1.png" border="0" alt="" usemap="#IAngleDetector"/>
 <map name="IAngleDetector" id="IAngleDetector">
 <area shape="rect" id="node1" href="classIAngleDetector.html" title="IAngleDetector" alt="" coords="5,31,115,57"/>
 <area shape="rect" id="node2" href="classAngleDetector.html" title="Detects angle of object. " alt="" coords="163,31,268,57"/>
@@ -31,13 +36,23 @@ $(function() {
 <area shape="rect" id="node4" href="classAngleServer.html" title="AngleServer" alt="" coords="324,56,417,83"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_1.png" border="0" alt="" usemap="#IBrain"/>
+<tr><td><img src="inherit_graph_2.png" border="0" alt="" usemap="#IBrain"/>
 <map name="IBrain" id="IBrain">
 <area shape="rect" id="node1" href="classIBrain.html" title="interface " alt="" coords="5,5,61,32"/>
 <area shape="rect" id="node2" href="classBrain.html" title="Brain" alt="" coords="109,5,161,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_2.png" border="0" alt="" usemap="#IManip"/>
+<tr><td><img src="inherit_graph_3.png" border="0" alt="" usemap="#IException"/>
+<map name="IException" id="IException">
+<area shape="rect" id="node1" href="classIException.html" title="Interface for exceptions to be overwritten by the derived classes. " alt="" coords="5,107,89,133"/>
+<area shape="rect" id="node2" href="classExceptionPololu.html" title="ExceptionPololu" alt="" coords="179,5,295,32"/>
+<area shape="rect" id="node3" href="classExceptionSerialCom.html" title="Exception class for class SerialCom. " alt="" coords="167,56,308,83"/>
+<area shape="rect" id="node4" href="classExceptionServoMotor.html" title="ExceptionServoMotor" alt="" coords="164,107,311,133"/>
+<area shape="rect" id="node5" href="classExceptionServoMotorBase.html" title="ExceptionServoMotorBase" alt="" coords="149,157,326,184"/>
+<area shape="rect" id="node6" href="classExceptionServoMotorBaseAdv.html" title="ExceptionServoMotorBaseAdv" alt="" coords="137,208,337,235"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_4.png" border="0" alt="" usemap="#IManip"/>
 <map name="IManip" id="IManip">
 <area shape="rect" id="node1" href="classIManip.html" title="Interface for number of image manipulation classes. " alt="" coords="5,31,67,57"/>
 <area shape="rect" id="node2" href="classImgSegmentSpecial.html" title="Crops received image according to motor index from topic rectangle/index. " alt="" coords="115,5,253,32"/>
@@ -47,6 +62,30 @@ $(function() {
 <area shape="rect" id="node6" href="classImgSegmentSimple.html" title="Crops received image according to coordinates from topic rectangle/dimensions. " alt="" coords="407,81,543,108"/>
 </map>
 </td></tr>
+<tr><td><img src="inherit_graph_5.png" border="0" alt="" usemap="#IPololu"/>
+<map name="IPololu" id="IPololu">
+<area shape="rect" id="node1" href="classIPololu.html" title="Interface to control a Pololu controller. The interface provides the basic functions for the control ..." alt="" coords="5,5,68,32"/>
+<area shape="rect" id="node2" href="classPololu.html" title="Class that implements the interface IPololu for a Pololu board that creates and manages serial commun..." alt="" coords="116,5,175,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_6.png" border="0" alt="" usemap="#ISerialCom"/>
+<map name="ISerialCom" id="ISerialCom">
+<area shape="rect" id="node1" href="classISerialCom.html" title="ISerialCom" alt="" coords="5,5,92,32"/>
+<area shape="rect" id="node2" href="classSerialComBase.html" title="SerialComBase" alt="" coords="140,5,253,32"/>
+<area shape="rect" id="node3" href="classSerialComLINUX.html" title="SerialComLINUX" alt="" coords="301,5,424,32"/>
+<area shape="rect" id="node4" href="classSerialCom.html" title="Interface for a serial connection via serial port. The implementation of this communication requires ..." alt="" coords="472,5,555,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_7.png" border="0" alt="" usemap="#IServoMotorBase"/>
+<map name="IServoMotorBase" id="IServoMotorBase">
+<area shape="rect" id="node1" href="classIServoMotoBaseAdv.html" title="Interface class that specifies additional functionality with respect to set maximal speed and acceler..." alt="" coords="182,5,325,32"/>
+<area shape="rect" id="node2" href="classServoMotorPololuBaseAdv.html" title="Implements the interface IServoMotoBaseAdv derived from class ServoMotorPololuBase. " alt="" coords="379,31,557,57"/>
+<area shape="rect" id="node3" href="classServoMotor.html" title="ServoMotor" alt="" coords="605,56,695,83"/>
+<area shape="rect" id="node4" href="classIServoMotor.html" title="Interface to control a servo motor. The interface provides the basic functions for the control for a ..." alt="" coords="421,81,515,108"/>
+<area shape="rect" id="node5" href="classIServoMotorBase.html" title="Interface class that specifies the basic functionality of object that initializes and controls a serv..." alt="" coords="5,56,128,83"/>
+<area shape="rect" id="node6" href="classServoMotorPololuBase.html" title="Class implements the interface IServoMotorBase based on the pololu controller board (https://www..." alt="" coords="176,56,331,83"/>
+</map>
+</td></tr>
 </table>
 </div><!-- contents -->
 
@@ -54,7 +93,7 @@ $(function() {
 <hr size="1"><div style="align: right;">
 <a href="http://wiki.ros.org/remote_robotics">remote_robotics</a><br />
 Author(s): </br />
-<small>autogenerated on Mon Apr 22 2024 13:19:51</small>
+<small>autogenerated on Sun Apr 28 2024 16:04:02</small>
 </div>
 </body>
 </html>

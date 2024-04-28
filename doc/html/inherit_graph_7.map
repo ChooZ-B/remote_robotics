@@ -1,0 +1,8 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classIServoMotoBaseAdv.html" title="Interface class that specifies additional functionality with respect to set maximal speed and acceler..." alt="" coords="182,5,325,32"/>
+<area shape="rect" id="node2" href="$classServoMotorPololuBaseAdv.html" title="Implements the interface IServoMotoBaseAdv derived from class ServoMotorPololuBase. " alt="" coords="379,31,557,57"/>
+<area shape="rect" id="node3" href="$classServoMotor.html" title="ServoMotor" alt="" coords="605,56,695,83"/>
+<area shape="rect" id="node4" href="$classIServoMotor.html" title="Interface to control a servo motor. The interface provides the basic functions for the control for a ..." alt="" coords="421,81,515,108"/>
+<area shape="rect" id="node5" href="$classIServoMotorBase.html" title="Interface class that specifies the basic functionality of object that initializes and controls a serv..." alt="" coords="5,56,128,83"/>
+<area shape="rect" id="node6" href="$classServoMotorPololuBase.html" title="Class implements the interface IServoMotorBase based on the pololu controller board (https://www..." alt="" coords="176,56,331,83"/>
+</map>

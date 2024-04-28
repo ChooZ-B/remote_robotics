@@ -1,0 +1,7 @@
+<map id="ServoMotor" name="ServoMotor">
+<area shape="rect" id="node2" href="$classServoMotorPololuBaseAdv.html" title="Implements the interface IServoMotoBaseAdv derived from class ServoMotorPololuBase. " alt="" coords="80,155,259,181"/>
+<area shape="rect" id="node3" href="$classServoMotorPololuBase.html" title="Class implements the interface IServoMotorBase based on the pololu controller board (https://www..." alt="" coords="5,80,160,107"/>
+<area shape="rect" id="node4" href="$classIServoMotorBase.html" title="Interface class that specifies the basic functionality of object that initializes and controls a serv..." alt="" coords="21,5,144,32"/>
+<area shape="rect" id="node5" href="$classIServoMotoBaseAdv.html" title="Interface class that specifies additional functionality with respect to set maximal speed and acceler..." alt="" coords="185,80,327,107"/>
+<area shape="rect" id="node6" href="$classIServoMotor.html" title="Interface to control a servo motor. The interface provides the basic functions for the control for a ..." alt="" coords="283,155,376,181"/>
+</map>

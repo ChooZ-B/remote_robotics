@@ -1,4 +1,6 @@
 #include <ros/ros.h>
+#include <cstdlib>
+#include <cstring>
 #include "remote_robotics/servo_motor_pos.h"
 
 #include "pololu/Pololu.hpp"
@@ -24,12 +26,17 @@ void shutDown();
 
   
 int main(int argc, char **argv){
+  if(argc < 2)
+      std::cout << ("usage: process <device_port_number>") << std::endl;
+  
   ros::init(argc, argv, "servo_motor_server");
   ros::NodeHandle n;
   ros::ServiceServer service = n.advertiseService("set_abs_servo_motor", setPosSrvMotor);
 
   // init serial connection
-  const char* portName = "/dev/ttyACM0";  // Linux
+  char portName[] = "/dev/ttyACM";  // Linux
+  strcat(portName,argv[1]);
+  
   conn = new Pololu(portName, 9600);
   try{
 	  conn->openConnection();

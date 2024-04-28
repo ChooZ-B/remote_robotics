@@ -1,0 +1,8 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classIException.html" title="Interface for exceptions to be overwritten by the derived classes. " alt="" coords="5,107,89,133"/>
+<area shape="rect" id="node2" href="$classExceptionPololu.html" title="ExceptionPololu" alt="" coords="179,5,295,32"/>
+<area shape="rect" id="node3" href="$classExceptionSerialCom.html" title="Exception class for class SerialCom. " alt="" coords="167,56,308,83"/>
+<area shape="rect" id="node4" href="$classExceptionServoMotor.html" title="ExceptionServoMotor" alt="" coords="164,107,311,133"/>
+<area shape="rect" id="node5" href="$classExceptionServoMotorBase.html" title="ExceptionServoMotorBase" alt="" coords="149,157,326,184"/>
+<area shape="rect" id="node6" href="$classExceptionServoMotorBaseAdv.html" title="ExceptionServoMotorBaseAdv" alt="" coords="137,208,337,235"/>
+</map>

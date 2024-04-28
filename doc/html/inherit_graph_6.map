@@ -1,0 +1,6 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classISerialCom.html" title="ISerialCom" alt="" coords="5,5,92,32"/>
+<area shape="rect" id="node2" href="$classSerialComBase.html" title="SerialComBase" alt="" coords="140,5,253,32"/>
+<area shape="rect" id="node3" href="$classSerialComLINUX.html" title="SerialComLINUX" alt="" coords="301,5,424,32"/>
+<area shape="rect" id="node4" href="$classSerialCom.html" title="Interface for a serial connection via serial port. The implementation of this communication requires ..." alt="" coords="472,5,555,32"/>
+</map>

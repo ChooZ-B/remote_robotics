@@ -1,0 +1,5 @@
+<map id="SerialComLINUX" name="SerialComLINUX">
+<area shape="rect" id="node4" href="$classSerialCom.html" title="Interface for a serial connection via serial port. The implementation of this communication requires ..." alt="" coords="25,229,108,256"/>
+<area shape="rect" id="node2" href="$classSerialComBase.html" title="SerialComBase" alt="" coords="10,80,123,107"/>
+<area shape="rect" id="node3" href="$classISerialCom.html" title="ISerialCom" alt="" coords="23,5,110,32"/>
+</map>
