@@ -85,7 +85,7 @@ class AngleServer : public AngleDetector{
         /**
          * Array containing the current angle of every servo
          */
-        double angles[24];
+        double angles_[24];
     public:
         AngleServer(const char* s_topic, int sq_size);
         /**

@@ -22,6 +22,6 @@ int main(int argc, char** argv)
 
     ros::spin();
     
-    ROS_INFO("terminating node...\n");
+    //ROS_INFO("terminating node...\n");
     return 0;
 }

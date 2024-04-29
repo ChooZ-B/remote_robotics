@@ -5,6 +5,9 @@
 
 AngleServer::AngleServer(const char* s_topic, int sq_size)
 {
+    int i;
+    for(i = 0; i < 23; i++) angles[i] = 0;
+
     sub_ = nh_.subscribe(s_topic,sq_size,&AngleServer::callback,this);
     server_ = nh_.advertiseService("rotor_pos/angle",&AngleServer::sendAngle,this);
     ROS_INFO("service ready for processing requests\n");
@@ -12,9 +15,11 @@ AngleServer::AngleServer(const char* s_topic, int sq_size)
 
 void AngleServer::callback(const remote_robotics::MotorImg& msg)
 {
+    int idx;
     cv_bridge::CvImagePtr cv_ptr;
 
-    //ROS_INFO("%i\n",msg.INDEX); //debugging
+    idx = msg.INDEX;
+    ROS_INFO("%i\n",idx); //debugging
 
     try
     {
@@ -28,10 +33,10 @@ void AngleServer::callback(const remote_robotics::MotorImg& msg)
 
     try
     {
-        if((msg.INDEX < 0) || (msg.INDEX > 23))
+        if((idx < 0) || (idx > 23))
             throw std::string("motor index out of bounds in member function callback()");
 
-        angles[msg.INDEX] = getAngle(cv_ptr->image);
+        angles_[idx] = getAngle(cv_ptr->image);
 
     }
     catch(std::string e)

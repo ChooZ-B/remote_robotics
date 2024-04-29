@@ -53,7 +53,7 @@ void test()
         if(!b.setPos(idx,new_angle)) continue;
 
         sleep(2);
-        b.getAngle(idx);
+        curr_angle = b.getAngle(idx);
         std::cout << "angle: " << curr_angle << std::endl;
         //ros::spinOnce();
         //loop_rate.sleep();
