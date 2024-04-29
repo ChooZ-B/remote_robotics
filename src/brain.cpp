@@ -24,7 +24,7 @@ int Brain::getAngle(int motor_idx)
     }
     else
     {
-        ROS_ERROR("Failed to call angle detector service.\n");
+        ROS_ERROR("Failed to call service %s.\n",curr_angle_client_.get_Service().c_str());
         return -361;
     }
 }
@@ -46,7 +46,7 @@ bool Brain::setPos(int motor_idx, int new_pos)
     }
     else
     {
-        ROS_ERROR("Failed to call service servo_motor_pos.\n");
+        ROS_ERROR("Failed to call service %s.\n",set_pos_client_.get_Service().c_str());
         return false;
     }
 }

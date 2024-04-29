@@ -40,5 +40,6 @@ int main(int argc, char** argv)
     ros::spin();
     cv::destroyWindow("view");
     
+    ROS_INFO("terminating node...\n");
     return 0;
 }

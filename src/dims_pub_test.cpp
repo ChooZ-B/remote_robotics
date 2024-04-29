@@ -12,6 +12,8 @@ int main(int argc, char** argv)
 {
     std::cout << "-1 to end process" << std::endl;
     index_set(argc,argv);
+
+    ROS_INFO("terminating node...\n");
     return 0;
 }
 

@@ -14,7 +14,7 @@ int main(int argc, char** argv)
         ROS_INFO("usage: process <subscriber_topic const char*>\n");
         return 1;
     }
- 
+
     //try
     //{
         AngleServer a(argv[1],5);
@@ -25,5 +25,7 @@ int main(int argc, char** argv)
     //    return 1;
     //}
     ros::spin();
+
+    ROS_INFO("terminating node...\n");
     return 0;
 }

@@ -7,6 +7,7 @@ AngleServer::AngleServer(const char* s_topic, int sq_size)
 {
     sub_ = nh_.subscribe(s_topic,sq_size,&AngleServer::callback,this);
     server_ = nh_.advertiseService("rotor_pos/angle",&AngleServer::sendAngle,this);
+    ROS_INFO("service ready for processing requests\n");
 }
 
 void AngleServer::callback(const remote_robotics::MotorImg& msg)

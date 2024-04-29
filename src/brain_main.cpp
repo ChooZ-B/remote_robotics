@@ -11,8 +11,8 @@ int main(int argc, char** argv)
 
     //ros::Rate loop_rate(50);
     test();
-    std::cout << "terminating node..." << std::endl;
 
+    ROS_INFO("terminating node...\n");
     return 0;
 }
 void test()

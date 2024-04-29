@@ -21,6 +21,7 @@ int main(int argc, char** argv)
     BinaryImg I("image/from_cam",10,10);
 
     ros::spin();
-
+    
+    ROS_INFO("terminating node...\n");
     return 0;
 }

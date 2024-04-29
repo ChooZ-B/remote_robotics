@@ -71,6 +71,7 @@ int main(int argc, char **argv){
   ros::spin();
 
   shutDown();
+  ROS_INFO("terminating node...\n");
   return 0;
 }
 
