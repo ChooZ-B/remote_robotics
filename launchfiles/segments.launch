@@ -1,75 +1,75 @@
 <!-- launch 24 crop nodes to publish images of every servo motor in the hub -->
 <launch>
-	<node pkg="remote_robotics" type="crop_node" name="crop0" output="screen" args="image/binary image/binary/motor0">
+	<node pkg="remote_robotics" type="crop_node" name="crop0" output="screen" args="image/binary image/binary/cropped">
 		<remap from="rectangle/index" to="ROI/motor0"/>
 	</node>
-	<node pkg="remote_robotics" type="crop_node" name="crop1" output="screen" args="image/binary image/binary/motor1">
+	<node pkg="remote_robotics" type="crop_node" name="crop1" output="screen" args="image/binary image/binary/cropped">
 		<remap from="rectangle/index" to="ROI/motor1"/>
 	</node>
-	<node pkg="remote_robotics" type="crop_node" name="crop2" output="screen" args="image/binary image/binary/motor2">
+	<node pkg="remote_robotics" type="crop_node" name="crop2" output="screen" args="image/binary image/binary/cropped">
 		<remap from="rectangle/index" to="ROI/motor2"/>
 	</node>
-	<node pkg="remote_robotics" type="crop_node" name="crop3" output="screen" args="image/binary image/binary/motor3">
+	<node pkg="remote_robotics" type="crop_node" name="crop3" output="screen" args="image/binary image/binary/cropped">
 		<remap from="rectangle/index" to="ROI/motor3"/>
 	</node>
-	<node pkg="remote_robotics" type="crop_node" name="crop4" output="screen" args="image/binary image/binary/motor4">
+	<node pkg="remote_robotics" type="crop_node" name="crop4" output="screen" args="image/binary image/binary/cropped">
 		<remap from="rectangle/index" to="ROI/motor4"/>
 	</node>
-	<node pkg="remote_robotics" type="crop_node" name="crop5" output="screen" args="image/binary image/binary/motor5">
+	<node pkg="remote_robotics" type="crop_node" name="crop5" output="screen" args="image/binary image/binary/cropped">
 		<remap from="rectangle/index" to="ROI/motor5"/>
 	</node>
-	<node pkg="remote_robotics" type="crop_node" name="crop6" output="screen" args="image/binary image/binary/motor6">
+	<node pkg="remote_robotics" type="crop_node" name="crop6" output="screen" args="image/binary image/binary/cropped">
 		<remap from="rectangle/index" to="ROI/motor6"/>
 	</node>
-	<node pkg="remote_robotics" type="crop_node" name="crop7" output="screen" args="image/binary image/binary/motor7">
+	<node pkg="remote_robotics" type="crop_node" name="crop7" output="screen" args="image/binary image/binary/cropped">
 		<remap from="rectangle/index" to="ROI/motor7"/>
 	</node>
-	<node pkg="remote_robotics" type="crop_node" name="crop8" output="screen" args="image/binary image/binary/motor8">
+	<node pkg="remote_robotics" type="crop_node" name="crop8" output="screen" args="image/binary image/binary/cropped">
 		<remap from="rectangle/index" to="ROI/motor8"/>
 	</node>
-	<node pkg="remote_robotics" type="crop_node" name="crop9" output="screen" args="image/binary image/binary/motor9">
+	<node pkg="remote_robotics" type="crop_node" name="crop9" output="screen" args="image/binary image/binary/cropped">
 		<remap from="rectangle/index" to="ROI/motor9"/>
 	</node>
-	<node pkg="remote_robotics" type="crop_node" name="crop10" output="screen" args="image/binary image/binary/motor10">
+	<node pkg="remote_robotics" type="crop_node" name="crop10" output="screen" args="image/binary image/binary/cropped">
 		<remap from="rectangle/index" to="ROI/motor10"/>
 	</node>
-	<node pkg="remote_robotics" type="crop_node" name="crop11" output="screen" args="image/binary image/binary/motor11">
+	<node pkg="remote_robotics" type="crop_node" name="crop11" output="screen" args="image/binary image/binary/cropped">
 		<remap from="rectangle/index" to="ROI/motor11"/>
 	</node>
-	<node pkg="remote_robotics" type="crop_node" name="crop12" output="screen" args="image/binary image/binary/motor12">
+	<node pkg="remote_robotics" type="crop_node" name="crop12" output="screen" args="image/binary image/binary/cropped">
 		<remap from="rectangle/index" to="ROI/motor12"/>
 	</node>
-	<node pkg="remote_robotics" type="crop_node" name="crop13" output="screen" args="image/binary image/binary/motor13">
+	<node pkg="remote_robotics" type="crop_node" name="crop13" output="screen" args="image/binary image/binary/cropped">
 		<remap from="rectangle/index" to="ROI/motor13"/>
 	</node>
-	<node pkg="remote_robotics" type="crop_node" name="crop14" output="screen" args="image/binary image/binary/motor14">
+	<node pkg="remote_robotics" type="crop_node" name="crop14" output="screen" args="image/binary image/binary/cropped">
 		<remap from="rectangle/index" to="ROI/motor14"/>
 	</node>
-	<node pkg="remote_robotics" type="crop_node" name="crop15" output="screen" args="image/binary image/binary/motor15">
+	<node pkg="remote_robotics" type="crop_node" name="crop15" output="screen" args="image/binary image/binary/cropped">
 		<remap from="rectangle/index" to="ROI/motor15"/>
 	</node>
-	<node pkg="remote_robotics" type="crop_node" name="crop16" output="screen" args="image/binary image/binary/motor16">
+	<node pkg="remote_robotics" type="crop_node" name="crop16" output="screen" args="image/binary image/binary/cropped">
 		<remap from="rectangle/index" to="ROI/motor16"/>
 	</node>
-	<node pkg="remote_robotics" type="crop_node" name="crop17" output="screen" args="image/binary image/binary/motor17">
+	<node pkg="remote_robotics" type="crop_node" name="crop17" output="screen" args="image/binary image/binary/cropped">
 		<remap from="rectangle/index" to="ROI/motor17"/>
 	</node>
-	<node pkg="remote_robotics" type="crop_node" name="crop18" output="screen" args="image/binary image/binary/motor18">
+	<node pkg="remote_robotics" type="crop_node" name="crop18" output="screen" args="image/binary image/binary/cropped">
 		<remap from="rectangle/index" to="ROI/motor18"/>
 	</node>
-	<node pkg="remote_robotics" type="crop_node" name="crop19" output="screen" args="image/binary image/binary/motor19">
+	<node pkg="remote_robotics" type="crop_node" name="crop19" output="screen" args="image/binary image/binary/cropped">
 		<remap from="rectangle/index" to="ROI/motor19"/>
 	</node>
-	<node pkg="remote_robotics" type="crop_node" name="crop20" output="screen" args="image/binary image/binary/motor20">
+	<node pkg="remote_robotics" type="crop_node" name="crop20" output="screen" args="image/binary image/binary/cropped">
 		<remap from="rectangle/index" to="ROI/motor20"/>
 	</node>
-	<node pkg="remote_robotics" type="crop_node" name="crop21" output="screen" args="image/binary image/binary/motor21">
+	<node pkg="remote_robotics" type="crop_node" name="crop21" output="screen" args="image/binary image/binary/cropped">
 		<remap from="rectangle/index" to="ROI/motor21"/>
 	</node>
-	<node pkg="remote_robotics" type="crop_node" name="crop22" output="screen" args="image/binary image/binary/motor22">
+	<node pkg="remote_robotics" type="crop_node" name="crop22" output="screen" args="image/binary image/binary/cropped">
 		<remap from="rectangle/index" to="ROI/motor22"/>
 	</node>
-	<node pkg="remote_robotics" type="crop_node" name="crop23" output="screen" args="image/binary image/binary/motor23">
+	<node pkg="remote_robotics" type="crop_node" name="crop23" output="screen" args="image/binary image/binary/cropped">
 		<remap from="rectangle/index" to="ROI/motor23"/>
 	</node>
 
