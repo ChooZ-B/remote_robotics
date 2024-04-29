@@ -57,7 +57,7 @@ bool AngleServer::sendAngle(remote_robotics::rotor_angle::Request& req,
         return true;
     }
 
-    res.ANGLE = static_cast<int>(angles[req.INDEX]);
+    res.ANGLE = static_cast<int>(angles_[req.INDEX]);
     return false;
 }
 
