@@ -87,6 +87,8 @@ bool setPosSrvMotor(remote_robotics::servo_motor_pos::Request   &input, remote_r
 	// check values
 	if((int)input.inpMotorIdxSrv > (nmbMotors-1)){
 		std::cout << "Motor index out of range, max. index value is " << (nmbMotors-1) << "\n";
+        //output.outPosUnit = "Motor index out of range, max. index value is "  + std::to_string(nmbMotors-1);  // possible future change
+        //return true; 
 		return false;
 	}
 
