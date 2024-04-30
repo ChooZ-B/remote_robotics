@@ -19,8 +19,8 @@ int Brain::getAngle(int motor_idx)
 {
     remote_robotics::rotor_angle srv;
     srv.request.INDEX = motor_idx;
-    if (curr_angle_client_.exists()) 
-        ROS_INFO("%s exists",curr_angle_client_.getService().c_str());
+    //if (curr_angle_client_.exists()) 
+    //    ROS_INFO("%s exists",curr_angle_client_.getService().c_str());
     if (curr_angle_client_.call(srv))
     {
         if((bool)srv.response.STATUS)
