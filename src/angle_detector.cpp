@@ -19,7 +19,7 @@ void AngleServer::callback(const remote_robotics::MotorImg& msg)
     cv_bridge::CvImagePtr cv_ptr;
 
     idx = msg.INDEX;
-    ROS_INFO("%i\n",idx); //debugging
+    //ROS_INFO("%i\n",idx); //debugging
 
     try
     {

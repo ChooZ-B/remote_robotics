@@ -11,7 +11,7 @@
 Pololu      *conn;
 ServoMotor  *ptrArm;
 ServoMotor* *fieldOMotors;
-int nmbMotors = 4;
+int nmbMotors = 24;
 
 
 /*
