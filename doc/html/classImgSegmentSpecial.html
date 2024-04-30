@@ -25,7 +25,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Crops received image according to motor index from topic <code>rectangle/index</code>.  
+<p>Crops received image according to motor index contained in srv <code>motor_idx</code>.  
  <a href="classImgSegmentSpecial.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="img__manip_8hpp_source.html">img_manip.hpp</a>&gt;</code></p>
@@ -41,6 +41,7 @@ Inheritance diagram for ImgSegmentSpecial:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a2af4e536aa43edf8d66b8d897ce3406c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImgSegmentSpecial.html#a2af4e536aa43edf8d66b8d897ce3406c">callback</a> (const sensor_msgs::ImageConstPtr &amp;msg)</td></tr>
+<tr class="memdesc:a2af4e536aa43edf8d66b8d897ce3406c"><td class="mdescLeft">&#160;</td><td class="mdescRight">ROS callback function.  <a href="#a2af4e536aa43edf8d66b8d897ce3406c">More...</a><br /></td></tr>
 <tr class="separator:a2af4e536aa43edf8d66b8d897ce3406c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a505212685a2219ed156e7572aa154ac6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImgSegmentSpecial.html#a505212685a2219ed156e7572aa154ac6">ImgSegmentSpecial</a> (const char *s_topic, int sq_size, const char *p_topic, int pq_size)</td></tr>
 <tr class="separator:a505212685a2219ed156e7572aa154ac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -67,8 +68,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a309ee2ede9238c120e7c157b249be074"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af25353aabba75cfd5d7a49ef24e327c6"><td class="memItemLeft" align="right" valign="top">ros::Publisher&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImgSegmentSpecial.html#af25353aabba75cfd5d7a49ef24e327c6">pub_</a></td></tr>
 <tr class="separator:af25353aabba75cfd5d7a49ef24e327c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9bbf896c2058cb98a82bb46d96bc467c"><td class="memItemLeft" align="right" valign="top">ros::ServiceServer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImgSegmentSpecial.html#a9bbf896c2058cb98a82bb46d96bc467c">srv_</a></td></tr>
-<tr class="separator:a9bbf896c2058cb98a82bb46d96bc467c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0135eff42f2f8ee9a88118a0ff0dcd39"><td class="memItemLeft" align="right" valign="top">ros::ServiceServer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImgSegmentSpecial.html#a0135eff42f2f8ee9a88118a0ff0dcd39">server_</a></td></tr>
+<tr class="separator:a0135eff42f2f8ee9a88118a0ff0dcd39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ccb9d8b11412abbc63fc8bfaf09b7b4"><td class="memItemLeft" align="right" valign="top">image_transport::Subscriber&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImgSegmentSpecial.html#a9ccb9d8b11412abbc63fc8bfaf09b7b4">sub_</a></td></tr>
 <tr class="separator:a9ccb9d8b11412abbc63fc8bfaf09b7b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -76,7 +77,7 @@ Protected Attributes</h2></td></tr>
 Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Crops received image according to motor index from topic <code>rectangle/index</code>. </p>
+<div class="textblock"><p>Crops received image according to motor index contained in srv <code>motor_idx</code>. </p>
 
 <p class="definition">Definition at line <a class="el" href="img__manip_8hpp_source.html#l00142">142</a> of file <a class="el" href="img__manip_8hpp_source.html">img_manip.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -117,9 +118,8 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>ACHTUNG experimentell</p>
 
-<p class="definition">Definition at line <a class="el" href="img__manip_8cpp_source.html#l00127">127</a> of file <a class="el" href="img__manip_8cpp_source.html">img_manip.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="img__manip_8cpp_source.html#l00125">125</a> of file <a class="el" href="img__manip_8cpp_source.html">img_manip.cpp</a>.</p>
 
 </div>
 </div>
@@ -147,12 +147,19 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>ACHTUNG!! UEBERSCHREIBT NICHT URSPRUENGLICHE CALLBACKMETHODE WEGEN OVERLOADING eventuell neuschreiben von <a class="el" href="classManip.html" title="Fully implements callback function. ">Manip</a> </p>
+
+<p>ROS callback function. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg</td><td>ROS sensor message containing image data </td></tr>
+  </table>
+  </dd>
+</dl>
 <p>! IMG of data type ImagePtr, does not compile </p>
 
 <p>Implements <a class="el" href="classIManip.html#ab52af2ec331437ef2f1c1582c285cb0c">IManip</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="img__manip_8cpp_source.html#l00179">179</a> of file <a class="el" href="img__manip_8cpp_source.html">img_manip.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="img__manip_8cpp_source.html#l00174">174</a> of file <a class="el" href="img__manip_8cpp_source.html">img_manip.cpp</a>.</p>
 
 </div>
 </div>
@@ -190,7 +197,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classIManip.html#a8ce242b886d94445e5ee92738779aeb2">IManip</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="img__manip_8cpp_source.html#l00172">172</a> of file <a class="el" href="img__manip_8cpp_source.html">img_manip.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="img__manip_8cpp_source.html#l00167">167</a> of file <a class="el" href="img__manip_8cpp_source.html">img_manip.cpp</a>.</p>
 
 </div>
 </div>
@@ -222,7 +229,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>analogous to <a class="el" href="classImgSegmentSimple.html#a976a65f4762e0f6c97180c0236327cf6" title="callback method to set region of interest ">ImgSegmentSimple::set_dim()</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="img__manip_8cpp_source.html#l00212">212</a> of file <a class="el" href="img__manip_8cpp_source.html">img_manip.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="img__manip_8cpp_source.html#l00207">207</a> of file <a class="el" href="img__manip_8cpp_source.html">img_manip.cpp</a>.</p>
 
 </div>
 </div>
@@ -349,8 +356,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a9bbf896c2058cb98a82bb46d96bc467c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9bbf896c2058cb98a82bb46d96bc467c">&#9670;&nbsp;</a></span>srv_</h2>
+<a id="a0135eff42f2f8ee9a88118a0ff0dcd39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0135eff42f2f8ee9a88118a0ff0dcd39">&#9670;&nbsp;</a></span>server_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -359,7 +366,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">ros::ServiceServer ImgSegmentSpecial::srv_</td>
+          <td class="memname">ros::ServiceServer ImgSegmentSpecial::server_</td>
         </tr>
       </table>
   </td>
@@ -407,7 +414,7 @@ Additional Inherited Members</h2></td></tr>
 <hr size="1"><div style="align: right;">
 <a href="http://wiki.ros.org/remote_robotics">remote_robotics</a><br />
 Author(s): </br />
-<small>autogenerated on Sun Apr 28 2024 16:04:02</small>
+<small>autogenerated on Tue Apr 30 2024 18:06:01</small>
 </div>
 </body>
 </html>

@@ -1,3 +1,5 @@
 int32 INDEX
 ---
+bool STATUS
 int32 ANGLE
+

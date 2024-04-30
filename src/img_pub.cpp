@@ -30,7 +30,7 @@ int main(int argc, char** argv)
     bool h = cap.set(cv::CAP_PROP_FRAME_HEIGHT,720);
     if(!w || !h)
     {
-        ROS_ERROR("WARNING: Resolution of 720p not supported\n");
+        ROS_ERROR("WARNING: Resolution of 720p not supported\n"); // appearently doesnt mean anything
     }
 
 

@@ -52,6 +52,9 @@ class Brain : public IBrain{
 
     public:
         Brain();
+        /**
+         * \throws string error message if communication failed or if index is out of range
+         */
         int getAngle(int motor_idx);
         bool setPos(int motor_idx, int new_pos);
 };

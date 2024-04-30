@@ -1,4 +1,5 @@
 #include"brain.hpp"
+#include<sstream>
 #include"img_manip.hpp"
 #include"angle_detector.hpp"
 #include"remote_robotics/rotor_angle.h"
@@ -18,15 +19,27 @@ int Brain::getAngle(int motor_idx)
 {
     remote_robotics::rotor_angle srv;
     srv.request.INDEX = motor_idx;
+    if (curr_angle_client_.exists()) 
+        ROS_INFO("%s exists",curr_angle_client_.getService().c_str());
     if (curr_angle_client_.call(srv))
     {
-        return srv.response.ANGLE;
+        if((bool)srv.response.STATUS)
+        {
+            return srv.response.ANGLE;
+        }
+        else
+        {
+            throw std::string("motor with number %i doesn't exist");
+        }
     }
     else
     {
-        ROS_ERROR("Failed to call service %s.\n",curr_angle_client_.getService().c_str());
-        return -361;
+        std::string error;
+        error = "Failed to call service " + curr_angle_client_.getService();
+        throw error;
+        //ROS_ERROR("Failed to call service %s.\n",curr_angle_client_.getService().c_str());
     }
+    return -361;
 }
 bool Brain::setPos(int motor_idx, int new_pos)
 {
@@ -46,8 +59,11 @@ bool Brain::setPos(int motor_idx, int new_pos)
     }
     else
     {
+        //std::string error;
+        //error = "Failed to call service " + curr_angle_client_.getService();
+        //throw error;
         ROS_ERROR("Failed to call service %s.\n",set_pos_client_.getService().c_str());
-        return false;
     }
+    return false;
 }
 

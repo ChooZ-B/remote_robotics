@@ -3,7 +3,10 @@
 #include<cv_bridge/cv_bridge.h>
 #include<image_transport/image_transport.h>
 #include<sstream>
+#include<cstdlib>
+#include"remote_robotics/MotorImg.h"
 
+std::string win_name;
 void imageCallback(const sensor_msgs::ImageConstPtr& msg)
 {
     try
@@ -21,6 +24,34 @@ void imageCallback(const sensor_msgs::ImageConstPtr& msg)
     }
     return;
 }
+void motorImageCallback(const remote_robotics::MotorImg& msg)
+{
+    int idx;
+    cv_bridge::CvImagePtr cv_ptr;
+
+    idx = msg.INDEX;
+    //ROS_INFO("%i\n",idx); //debugging
+
+    try
+    {
+        cv_ptr = cv_bridge::toCvCopy(msg.IMG,"");
+        //char idx_str[3];
+        //itoa(msg.INDEX,idx_str,10);
+        win_name = "motor" + std::to_string(msg.INDEX);//(const char*)idx_str;
+        
+        ROS_INFO("resolution: %dx%d\n",cv_ptr->image.cols,cv_ptr->image.rows);
+        cv::imshow(win_name,cv_ptr->image);
+        cv::waitKey(30);
+    }
+    catch(cv_bridge::Exception& e)
+    {
+        ROS_ERROR("cv_bridge exception: %s\n",e.what());
+        return;
+    }
+
+}
+
+
 
 int main(int argc, char** argv)
 {
@@ -28,18 +59,28 @@ int main(int argc, char** argv)
     ros::NodeHandle nh;
     cv::namedWindow("view",cv::WINDOW_AUTOSIZE/* | cv::WINDOW_KEEPRATIO | cv::WINDOW_GUI_EXPANDED*/);
 
-    if(argc < 2)
+    if(argc < 3)
     {
-        ROS_INFO("usage: process <subscriber_topic const char*>\n");
+        ROS_INFO("usage: process <msg type (ImageTransport or MotorImg)> <subscriber_topic const char*>\n");
         return 1;
     }
 
-    image_transport::ImageTransport it(nh);
-    image_transport::Subscriber sub = it.subscribe(argv[1],5,imageCallback);
+
+    if ((std::string(argv[1]).compare(0,8,"MotorImg") == 0))
+    {
+        ros::Subscriber sub = nh.subscribe(argv[2],5,motorImageCallback);
+    }
+    else // image transport msgs are default option
+    {
+        image_transport::ImageTransport it(nh);
+        win_name="view";
+        image_transport::Subscriber sub = it.subscribe(argv[2],5,imageCallback);
+    }
+
 
     ros::spin();
-    cv::destroyWindow("view");
+    cv::destroyWindow(win_name);
     
-    ROS_INFO("terminating node...\n");
+    std::cout << "terminating node..." << std::endl;
     return 0;
 }

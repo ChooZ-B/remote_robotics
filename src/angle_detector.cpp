@@ -51,14 +51,19 @@ void AngleServer::callback(const remote_robotics::MotorImg& msg)
 bool AngleServer::sendAngle(remote_robotics::rotor_angle::Request& req,
                 remote_robotics::rotor_angle::Response& res)
 {
-    if((req.INDEX < 0) || (req.INDEX > 23))
+    if ((req.INDEX >= 0) && (req.INDEX <= 23))
     {
+        res.STATUS = static_cast<uint8_t>(true);
+        res.ANGLE = static_cast<int>(angles_[req.INDEX]);
+    }
+    else
+    {
+        res.STATUS = static_cast<uint8_t>(false);
         res.ANGLE = -361;
-        return true;
     }
 
-    res.ANGLE = static_cast<int>(angles_[req.INDEX]);
-    return false;
+
+    return true;
 }
 
 AnglePublisher::AnglePublisher(const char* s_topic, int sq_size, const char* p_topic, int pq_size)
