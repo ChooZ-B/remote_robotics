@@ -13,7 +13,7 @@ int main(int argc, char** argv)
     std::cout << "-1 to end process" << std::endl;
     index_set(argc,argv);
 
-    ROS_INFO("terminating node...\n");
+    std::cout <<"\nterminating node..." << std::endl;
     return 0;
 }
 
@@ -34,24 +34,24 @@ void index_set(int argc, char** argv){
         if(std::cin.fail())
         {
             std::cin.clear();
-            ROS_INFO("input expected int\n");
+            ROS_INFO("input expected int");
             std::cin.ignore(1000,'\n');
             continue;
         }
         if(idx == -1)
         {
-            ROS_INFO("terminating node..\n");
+            ROS_INFO("terminating node..");
             break;
         }
         srv.request.INDEX = idx;
 
         if (client.call(srv))
         {
-            ROS_INFO("Received response: %s\n",srv.response.RESPONSE.c_str());
+            ROS_INFO("Received response: %s",srv.response.RESPONSE.c_str());
         }
         else
         {
-            ROS_ERROR("Failed to call service\n");
+            ROS_ERROR("Failed to call service");
         }
     }
     return;

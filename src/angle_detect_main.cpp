@@ -11,21 +11,21 @@ int main(int argc, char** argv)
 
     if(argc < 2)
     {
-        ROS_INFO("usage: process <subscriber_topic const char*>\n");
+        std::cout << "usage: process <subscriber_topic const char*>" << std::endl;
         return 1;
     }
 
-    //try
-    //{
-        AngleServer a(argv[1],5);
-    //}
-    //catch(std::string msg)
-    //{
-    //    ROS_ERROR("%s\n",msg.c_str());
-    //    return 1;
-    //}
+    try
+    {
+      AngleServer a(argv[1],5);
+    }
+    catch(std::string msg)
+    {
+        ROS_ERROR("%s\n",msg.c_str());
+        return 1;
+    }
     ros::spin();
 
-    std::cout << "terminating node..." << std::endl;
+    std::cout << "\nterminating node..." << std::endl;
     return 0;
 }

@@ -14,7 +14,7 @@ void imageCallback(const sensor_msgs::ImageConstPtr& msg)
         cv_bridge::CvImagePtr cv_ptr;
         cv_ptr = cv_bridge::toCvCopy(msg,"");
 
-        ROS_INFO("resolution: %dx%d\n",cv_ptr->image.cols,cv_ptr->image.rows);
+        ROS_INFO("resolution: %dx%d",cv_ptr->image.cols,cv_ptr->image.rows);
         cv::imshow("view",cv_ptr->image); //eventually window title based in topic
         cv::waitKey(30);
     }

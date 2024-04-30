@@ -41,7 +41,7 @@ void AngleServer::callback(const remote_robotics::MotorImg& msg)
     }
     catch(std::string e)
     {
-        ROS_INFO("%s\n",e.c_str());
+        ROS_INFO("%s",e.c_str());
     }
 
     return;
@@ -98,7 +98,7 @@ void AnglePublisher::callback(const remote_robotics::MotorImg& msg)
     }
     catch(std::string e)
     {
-        ROS_INFO("%s\n",e.c_str());
+        ROS_INFO("%s",e.c_str());
     }
 
     return;

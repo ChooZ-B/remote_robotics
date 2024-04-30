@@ -12,7 +12,7 @@ int main(int argc, char** argv)
 
     if(argc < 3)
     {
-        ROS_INFO("usage: process <subscriber_topic const char*> <publisher_topic> const char*>\n");
+        std::cout << "usage: process <subscriber_topic const char*> <publisher_topic const char*>" << std::endl;
         return 1;
     }
     
@@ -20,6 +20,6 @@ int main(int argc, char** argv)
 
     ros::spin();
 
-    ROS_INFO("terminating node...\n");
+    std::cout <<"\nterminating node..." << std::endl;
     return 0;
 }

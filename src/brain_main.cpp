@@ -12,7 +12,7 @@ int main(int argc, char** argv)
     //ros::Rate loop_rate(50);
     test();
 
-    ROS_INFO("terminating node...\n");
+    std::cout <<"\nterminating node..." << std::endl;
     return 0;
 }
 void test()
@@ -59,7 +59,7 @@ void test()
         }
         catch(std::string msg)
         {
-            ROS_ERROR("ERROR: %s\n",msg.c_str());
+            ROS_ERROR("%s\n",msg.c_str());
             continue;
         }
         std::cout << "angle: " << curr_angle << std::endl;

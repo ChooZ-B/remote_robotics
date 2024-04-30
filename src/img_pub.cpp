@@ -23,7 +23,7 @@ int main(int argc, char** argv)
     cv::VideoCapture cap(video_source);
     if(!cap.isOpened())
     {
-        ROS_ERROR("ERROR:unable to open video device %d\n",video_source);
+        ROS_ERROR("unable to open video device %d\n",video_source);
         return 1;
     }
     bool w = cap.set(cv::CAP_PROP_FRAME_WIDTH,1280);
@@ -44,7 +44,7 @@ int main(int argc, char** argv)
         cap.read(frame);
         if(frame.empty())
         {
-            ROS_ERROR("ERROR: blank frame grabbed\n");
+            ROS_ERROR("blank frame grabbed\n");
             continue;
         }
         msg = cv_bridge::CvImage(std_msgs::Header(), "bgr8", frame).toImageMsg();
@@ -55,6 +55,6 @@ int main(int argc, char** argv)
         loop_rate.sleep();
     }
     
-    ROS_INFO("terminating node...\n");
+    std::cout <<"\nterminating node..." << std::endl;
     return 0;
 }
