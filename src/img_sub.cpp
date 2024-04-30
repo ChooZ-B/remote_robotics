@@ -58,6 +58,10 @@ int main(int argc, char** argv)
     ros::init(argc, argv,"image_viewer");
     ros::NodeHandle nh;
     image_transport::ImageTransport it(nh);
+
+    image_transport::Subscriber it_sub;
+    ros::Subscriber sub;
+
     cv::namedWindow("view",cv::WINDOW_AUTOSIZE/* | cv::WINDOW_KEEPRATIO | cv::WINDOW_GUI_EXPANDED*/);
 
     if(argc < 3)
@@ -70,13 +74,13 @@ int main(int argc, char** argv)
     if ((std::string(argv[1]).compare(0,8,"MotorImg") == 0))
     {
         ROS_INFO("subscribing to MotorImage topic");
-        ros::Subscriber sub = nh.subscribe(argv[2],5,motorImageCallback);
+        sub = nh.subscribe(argv[2],5,motorImageCallback);
     }
     else // image transport msgs are default option
     {
         ROS_INFO("subscribing to ImageTransport topic");
         win_name="view";
-        image_transport::Subscriber sub = it.subscribe(argv[2],5,imageCallback);
+        it_sub = it.subscribe(argv[2],5,imageCallback);
     }
 
 
