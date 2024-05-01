@@ -27,7 +27,7 @@ void shutDown();
   
 int main(int argc, char **argv){
   if(argc < 2)
-      std::cout << ("usage: process <device_port_number>") << std::endl;
+      std::cout << ("usage: process <int device_port_number>") << std::endl;
   
   ros::init(argc, argv, "servo_motor_server");
   ros::NodeHandle n;
