@@ -1,6 +1,5 @@
-<!-- launch brain and angle detection node -->
+<!-- launch brain node -->
 <!-- this file is made for execution on the users host machine -->
 <launch>
-	<node pkg="remote_robotics" type="angle_detector" name="angle_server" output="log" args="image/binary/cropped" />
 	<node pkg="remote_robotics" type="brain" name="brain" output="screen" />
 </launch>

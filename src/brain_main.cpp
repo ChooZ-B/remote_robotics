@@ -26,7 +26,7 @@ void test()
 
     while(1)
     {
-        std::cout << "input index (25 to end process): ";
+        std::cout << "input servo index (25 to end process): ";
         std::cin >> idx;
         if(std::cin.fail())
         {
@@ -40,7 +40,7 @@ void test()
             return;
         }
 
-        std::cout << "input position: ";
+        std::cout << "input position(in degrees): ";
         std::cin >> new_angle;
         if(std::cin.fail())
         {

@@ -1,0 +1,5 @@
+<launch>
+	<node pkg="remote_robotics" type="binary_converter" name="binary_manip" output="screen"/>
+	<node pkg="remote_robotics" type="angle_detector" name="angle_server" output="log" args="image/binary/cropped" />
+
+</launch>
