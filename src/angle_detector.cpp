@@ -6,7 +6,7 @@
 AngleServer::AngleServer(const char* s_topic, int sq_size)
 {
     int i;
-    for(i = 0; i < 23; i++) angles_[i] = 0;
+    for(i = 0; i < 24; i++) angles_[i] = 0;
 
     sub_ = nh_.subscribe(s_topic,sq_size,&AngleServer::callback,this);
     server_ = nh_.advertiseService("rotor_pos/angle",&AngleServer::sendAngle,this);
