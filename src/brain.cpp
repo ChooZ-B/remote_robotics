@@ -23,14 +23,14 @@ int Brain::getAngle(int motor_idx)
     //    ROS_INFO("%s exists",curr_angle_client_.getService().c_str());
     if (curr_angle_client_.call(srv))
     {
-        if((bool)srv.response.STATUS)
-        {
+        //if((bool)srv.response.STATUS)
+        //{
             return srv.response.ANGLE;
-        }
-        else
-        {
-            throw std::string("motor with number %i doesn't exist");
-        }
+        //}
+        //else
+        //{
+        //    throw std::string("motor with number %i doesn't exist");
+        //}
     }
     else
     {
