@@ -1,4 +1,4 @@
-RemoteRobotics {#title}
+RemoteRobotics
 ==============
 
 This is a [ROS](https://www.ros.org/)-package developed for controlling
@@ -6,7 +6,7 @@ and examining a servo motor farm. It is designed
 to be controlled remotely over an IP-Network.
 The testing and development environment for this package was ROS Melodic.
 
-## Usage {#usage}
+## Usage
 
 ### Core functionality
 
@@ -18,8 +18,6 @@ seperate terminals to make node output to stdout clearer.
 roslaunch remote_robotics hardware.launch
 roslaunch remote_robotics segments.launch
 roslaunch remote_robotics angle_detection.launch
-```
-```
 roslaunch remote_robotics brain.launch
 ```
 
@@ -66,6 +64,8 @@ Converts image to binary image and publishes said image.
 
 ##### crop_node
 
+---
+
 Receives image messages and service requests containing motor index.
 It sends image messages of type `MotorImg`.
 
@@ -95,7 +95,7 @@ Provides service to set the angular position of the servo motors
 
     rosrun remote_robotics servo_hub <int device_number>
 
-`device_number` corresponds to pololu device that controls the servos are connected to.
+`device_number` corresponds to pololu device that controls the servos that are connected to it.
 
 **Services**
 * /set_abs_servo_motor
@@ -119,12 +119,12 @@ Changing the publisher topic of the binary_converter node would look like this:
 
     rosrun remote_robotics binary_converter image/from_cam image/binary:=image/binary2
 
-Instead of trying to find the default topic names in the source code, one should try
-`rostopic list` or use the graphical interface `rqt`.
+Instead of trying to find the default topic/service names in the source code, one should try
+`rostopic/rosservice list` or the graphical interface `rqt`.
 
 See http://wiki.ros.org/Remapping%20Arguments for further information.
 
-# 3. Communication between two machines
+## Communication between two machines
 
 To setup a ROS-communication between two machines both 
 IP addresses have to be known and set the Shell variables `ROS_MASTER_URI` and `ROS_IP`
